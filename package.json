@@ -1,0 +1,12 @@
+{
+  "name": "challenge-ignite-node-03",
+  "version": "1.0.0",
+  "description": "Third challenge of the ignite Node.js trail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
