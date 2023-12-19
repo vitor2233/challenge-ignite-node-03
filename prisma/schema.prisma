@@ -14,8 +14,8 @@ model Pet {
   id              String       @id @default(uuid())
   name            String
   about           String
-  Age             String
-  Size            String
+  age             String
+  size            String
   energy          String
   independency    String
   environment     String
@@ -32,8 +32,9 @@ model Organization {
   owner         String
   email         String   @unique
   cep           Int
-  address       String
-  number        Int
+  city          String
+  state         String
+  phone         Int
   password_hash String
   created_at    DateTime @default(now())
   pets          Pet[]
