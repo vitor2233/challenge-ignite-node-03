@@ -1,9 +1,23 @@
 import { Pet, Prisma } from "@prisma/client"
 
+export interface PetDetails {
+    name: string
+    about: string,
+    age: string
+    size: string
+    energy: string
+    independency: string
+    environment: string
+    requirements: string[]
+    organizationOwnerName: string,
+    organizationCity: string,
+    organizationState: string,
+    organizationNumber: number
+}
 
 export interface PetRepository {
     create(pet: Prisma.PetUncheckedCreateInput): Promise<Pet>
-    findManyByCity(page: number, city: string): Promise<Pet[]>
-    searchMany(query: string, page: number): Promise<Pet[]>
-    getPetDetailsById(id: string): Promise<Pet | null>
+    findManyByCity(city: string, page: number): Promise<Pet[]>
+    searchMany(query: Partial<Pet>, page: number): Promise<Pet[]>
+    getPetDetailsById(id: string): Promise<PetDetails | null>
 }
