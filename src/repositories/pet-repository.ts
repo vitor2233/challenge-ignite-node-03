@@ -16,7 +16,7 @@ export interface PetDetails {
 }
 
 export interface PetRepository {
-    create(pet: Prisma.PetUncheckedCreateInput): Promise<Pet>
+    create(data: Prisma.PetUncheckedCreateInput): Promise<Pet>
     findManyByCity(city: string, page: number): Promise<Pet[]>
     searchMany(query: Partial<Pet>, page: number): Promise<Pet[]>
     getPetDetailsById(id: string): Promise<PetDetails | null>
