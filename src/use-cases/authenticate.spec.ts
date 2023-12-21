@@ -13,7 +13,7 @@ describe('Authenticate Use Case', () => {
         sut = new AuthenticateUseCase(organizationRepository)
     })
 
-    it.only('should be able to authenticate', async () => {
+    it('should be able to authenticate', async () => {
         await organizationRepository.create({
             owner: 'vitor',
             email: 'vitor@email.com',
