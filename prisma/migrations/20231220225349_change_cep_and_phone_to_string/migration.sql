@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "organizations" ALTER COLUMN "cep" SET DATA TYPE TEXT,
+ALTER COLUMN "phone" SET DATA TYPE TEXT;
