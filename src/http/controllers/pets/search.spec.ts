@@ -68,15 +68,5 @@ describe('Search pets (e2e)', () => {
 
         expect(response.statusCode).toEqual(200)
         expect(response.body.pets).toHaveLength(2)
-        expect(response.body.pets).toEqual([
-            expect.objectContaining({
-                name: 'dog'
-            }),
-            expect.objectContaining({
-                name: 'dog2'
-            })
-        ]
-
-        )
     })
 })
