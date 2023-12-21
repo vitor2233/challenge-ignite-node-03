@@ -53,10 +53,10 @@ describe('Search Pets Use Case', () => {
 
         const bothPets = await sut.execute({
             age: 'New',
-            energy: undefined,
-            independency: undefined,
+            energy: null,
+            independency: null,
             page: 1,
-            size: undefined
+            size: null
         })
 
         expect(bothPets.pets).toHaveLength(2)

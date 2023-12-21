@@ -12,10 +12,10 @@ export class InMemoryPetRepository implements PetRepository {
             id: randomUUID(),
             owner: 'vitor',
             email: 'vitor@email.com',
-            cep: 30371823,
+            cep: '30371823',
             city: 'BH',
             state: 'MG',
-            phone: 3191234567897,
+            phone: '3191234567897',
             password_hash: await hash('12345', 6),
             created_at: new Date(),
         }

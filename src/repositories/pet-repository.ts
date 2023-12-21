@@ -12,7 +12,7 @@ export interface PetDetails {
     organizationOwnerName: string,
     organizationCity: string,
     organizationState: string,
-    organizationNumber: number
+    organizationNumber: string
 }
 
 export interface PetRepository {

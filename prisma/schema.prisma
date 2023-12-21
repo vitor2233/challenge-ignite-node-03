@@ -31,10 +31,10 @@ model Organization {
   id            String   @id @default(uuid())
   owner         String
   email         String   @unique
-  cep           Int
+  cep           String
   city          String
   state         String
-  phone         Int
+  phone         String
   password_hash String
   created_at    DateTime @default(now())
   pets          Pet[]

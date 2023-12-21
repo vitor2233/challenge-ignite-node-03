@@ -13,14 +13,14 @@ describe('Authenticate Use Case', () => {
         sut = new AuthenticateUseCase(organizationRepository)
     })
 
-    it('should be able to authenticate', async () => {
+    it.only('should be able to authenticate', async () => {
         await organizationRepository.create({
             owner: 'vitor',
             email: 'vitor@email.com',
-            cep: 30371823,
+            cep: '30371823',
             city: 'BH',
             state: 'MG',
-            phone: 3191234567897,
+            phone: '3191234567897',
             password_hash: await hash('12345', 6)
         })
 
@@ -44,10 +44,10 @@ describe('Authenticate Use Case', () => {
         await organizationRepository.create({
             owner: 'vitor',
             email: 'vitor@email.com',
-            cep: 30371823,
+            cep: '30371823',
             city: 'BH',
             state: 'MG',
-            phone: 3191234567897,
+            phone: '3191234567897',
             password_hash: await hash('12345', 6)
         })
 

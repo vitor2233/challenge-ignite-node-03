@@ -29,10 +29,10 @@ export class PrismaPetRepository implements PetRepository {
     async searchMany(query: Partial<Pet>, page: number): Promise<Pet[]> {
         const pets = await prisma.pet.findMany({
             where: {
-                age: query.age !== undefined ? { equals: query.age.toLowerCase() } : undefined,
-                energy: query.energy !== undefined ? { equals: query.energy.toLowerCase() } : undefined,
-                size: query.size !== undefined ? { equals: query.size.toLowerCase() } : undefined,
-                independency: query.independency !== undefined ? { equals: query.independency.toLowerCase() } : undefined,
+                age: query.age != undefined ? { contains: query.age, mode: 'insensitive' } : undefined,
+                energy: query.energy !== undefined ? { contains: query.energy, mode: 'insensitive' } : undefined,
+                size: query.size !== undefined ? { contains: query.size, mode: 'insensitive' } : undefined,
+                independency: query.independency !== undefined ? { contains: query.independency, mode: 'insensitive' } : undefined,
             },
             skip: (page - 1) * 20,
             take: 20,
